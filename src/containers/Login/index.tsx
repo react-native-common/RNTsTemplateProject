@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import styles from './styles';
-import { DispatchProp } from 'react-redux';
-import { NavigationStackScreenProps } from 'react-navigation-stack';
 import { AppModelState } from '@/models/app';
 import { connect } from '@/utils/dva';
+import { PageBaseProps } from '@/utils';
 
-type Props = NavigationStackScreenProps & DispatchProp & { app: AppModelState };
+type Props = PageBaseProps & { app: AppModelState };
 
 @connect(({ app }) => ({ app }))
 class Login extends Component<Props> {

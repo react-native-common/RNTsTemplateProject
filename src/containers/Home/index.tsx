@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
 import { NavigationTabScreenProps } from 'react-navigation-tabs';
 import styles from './styles';
+import { PageBaseProps } from '@/utils';
 
-interface Props extends NavigationTabScreenProps {}
+type Props = PageBaseProps;
 
 export default class Home extends Component<Props> {
   static navigationOptions = {
