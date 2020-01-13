@@ -1,4 +1,4 @@
-import { Model } from '@/utils/dva';
+import { Model } from '@/types/redux';
 
 export interface AppModelState {
   login: boolean;
