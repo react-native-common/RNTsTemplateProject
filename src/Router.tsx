@@ -10,7 +10,7 @@ const AppNavigator = createStackNavigator(
     Login: { screen: Login },
     Main: { screen: Main },
   },
-  { defaultNavigationOptions: { headerTitleAlign: 'center' } },
+  { defaultNavigationOptions: { headerTitleAlign: 'center' } }
 );
 
 export default createAppContainer(AppNavigator);

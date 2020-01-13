@@ -59,7 +59,9 @@ export interface Options {
 export default function(options: Options) {
   const app = create(options);
   // HMR workaround
-  if (!global.registered) options.models.forEach(model => app.model(model));
+  if (!global.registered) {
+    options.models.forEach(model => app.model(model));
+  }
   global.registered = true;
 
   app.start();
