@@ -1,4 +1,4 @@
-import { Model } from '../utils/dva';
+import { Model } from '@/utils/dva';
 
 export interface AppModelState {
   login: boolean;

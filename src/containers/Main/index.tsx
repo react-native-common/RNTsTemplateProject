@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-import Home from '../Home';
-import Mine from '../Mine';
+import Home from '@/containers/Home';
+import Mine from '@/containers/Mine';
 
 const Main = createBottomTabNavigator({
   Home: { screen: Home },

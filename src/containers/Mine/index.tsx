@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import styles from './styles';
+import { connect } from '@/utils/dva';
 
-export default class Mine extends Component {
+@connect(({ app }) => ({ app }))
+class Mine extends Component<any, any> {
   static navigationOptions = {
     title: '我的',
   };
@@ -14,3 +16,5 @@ export default class Mine extends Component {
     );
   }
 }
+
+export default Mine;

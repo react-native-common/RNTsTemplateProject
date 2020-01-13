@@ -3,7 +3,7 @@ import { View, Text, ActivityIndicator } from 'react-native';
 import { NavigationStackScreenProps } from 'react-navigation-stack';
 import styles from './styles';
 import { DispatchProp, connect } from 'react-redux';
-import { AppModelState } from '../../models/app';
+import { AppModelState } from '@/models/app';
 
 // interface Props extends NavigationStackScreenProps {}
 type Props = NavigationStackScreenProps & DispatchProp & { app: AppModelState };

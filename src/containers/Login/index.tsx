@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import styles from './styles';
-import { connect, DispatchProp } from 'react-redux';
-import { AppModelState } from 'src/models/app';
+import { DispatchProp } from 'react-redux';
 import { NavigationStackScreenProps } from 'react-navigation-stack';
+import { AppModelState } from '@/models/app';
+import { connect } from '@/utils/dva';
 
 type Props = NavigationStackScreenProps & DispatchProp & { app: AppModelState };
 
+@connect(({ app }) => ({ app }))
 class Login extends Component<Props> {
   render() {
     return (
@@ -23,4 +25,4 @@ class Login extends Component<Props> {
   }
 }
 
-export default connect(({ app }: { app: AppModelState }) => ({ app }))(Login);
+export default Login;
